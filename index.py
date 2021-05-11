@@ -18,9 +18,15 @@ class Secondpage(Resource):
     def get(self):
         return 'This is my second page'
 
+class Thirdpage(Resource):
+    def get(self):
+        return 'This is my third page'
+
 api.add_resource(Firstpage, '/firstpage')
 
 api.add_resource(Secondpage, '/Secondpage')
+
+api.add_resource(Thirdpage, '/thirdpage')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int("5000"),debug = True) 
